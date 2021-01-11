@@ -3,12 +3,12 @@
 {% block content %}
     <h2>Posts</h2>
     <ul>
-    {% for page in pages %}
+    {% for article in articles %}
         <li>
-            <a href="{{ url_for('page', path=page.path) }}">{{ page.title }}
+            <a href="{{ url_for('page', path=article.path) }}">{{ article.title }}
         </li>
     {% else %}
-        <li>No pages so far</li>
+        <li>No articles so far</li>
     {% endfor %}
     </ul>
 {% endblock content %}
