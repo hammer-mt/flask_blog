@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Posts</h2>
+    <ul>
+    {% for page in pages %}
+        <li>
+            <a href="{{ url_for('page', path=page.path) }}">{{ page.title }}
+        </li>
+    {% else %}
+        <li>No pages so far</li>
+    {% endfor %}
+    </ul>
+{% endblock content %}
